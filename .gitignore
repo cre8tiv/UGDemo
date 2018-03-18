@@ -292,3 +292,6 @@ __pycache__/
 
 # Vagrant image data
 .vagrant/
+
+# VS Code
+.vscode/
