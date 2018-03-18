@@ -1,0 +1,2 @@
+--restore the database
+RESTORE DATABASE DemoDb FROM DISK = "/var/opt/mssql/data/DemoDb.bak" WITH MOVE "DemoDb" TO "/var/opt/mssql/data/DemoDb.mdf", MOVE "DemoDb_log" TO "/var/opt/mssql/data/DemoDb.ldf"

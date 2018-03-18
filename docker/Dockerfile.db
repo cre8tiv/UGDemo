@@ -1,0 +1,3 @@
+FROM microsoft/mssql-server-linux:2017-CU4
+
+CMD ["/opt/mssql/bin/sqlservr"]
