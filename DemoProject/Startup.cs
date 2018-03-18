@@ -45,5 +45,11 @@ namespace DemoProject
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
         }
+
+        public void ConfigureDatabase(IServiceCollection services)
+        {
+            services.AddDbContext<DbContext>(options =>
+                options.UseSqlServer(GetConnectionString()));
+        }
     }
 }
