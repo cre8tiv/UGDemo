@@ -38,7 +38,7 @@ services:
             context: "./"
             dockerfile: ./docker/Dockerfile.web
         ports:
-            - "9079:9079"
+            - "9080:9080"
         environment:
             - ASPNETCORE_ENVIRONMENT=Development
             - ASPNETCORE_CONTENTROOTPATH=/app

@@ -9,7 +9,7 @@ Vagrant.configure("2") do |config|
   config.vm.provision "shell", inline: "cd /vagrant && sudo docker-compose ps", run: "always"
 
   # for api
-  config.vm.network "forwarded_port", guest: 80, host: 9080
+  config.vm.network "forwarded_port", guest: 80, host: 9081
 
   # for sql
   config.vm.network "forwarded_port", guest: 1433, host: 9033

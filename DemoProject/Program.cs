@@ -72,7 +72,7 @@ namespace DemoProject
                     .CaptureStartupErrors(true)
                     .UseKestrel(options =>
                     {
-                        options.Listen(IPAddress.Any, 9079);
+                        options.Listen(IPAddress.Any, 9080);
                     })
                     .Build();
             }
