@@ -294,4 +294,4 @@ __pycache__/
 .vagrant/
 
 # VS Code
-.vscode/
+.DemoProject/vscode/
