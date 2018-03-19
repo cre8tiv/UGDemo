@@ -10,7 +10,7 @@ services:
           - ./database:/tmp/backup          
         environment:
             - ACCEPT_EULA=Yy
-            - SA_PASSWORD=HereIsThePa$$word!
+            - SA_PASSWORD=HereIsThePassword!
             - MSSQL_PID=Developer
         ports:
             - "1433:1433"       
