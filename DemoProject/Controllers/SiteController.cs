@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using DemoProject.Data;
 
-namespace DemoProject
+namespace DemoProject.Controllers
 {
     public class SiteController : Controller
     {
@@ -48,9 +48,6 @@ namespace DemoProject
             return View();
         }
 
-        // POST: Site/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Url")] Site site)
@@ -80,9 +77,6 @@ namespace DemoProject
             return View(site);
         }
 
-        // POST: Site/Edit/5
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Url")] Site site)
