@@ -9,5 +9,14 @@ namespace DemoProject.Data
         public DemoProjectContext(DbContextOptions<DemoProjectContext> options) : base(options)
         {
         }
+
+        public DbSet<Site> Site { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Site>()
+                .Property(b => b.Url)
+                .IsRequired();
+        }
     }
 }
