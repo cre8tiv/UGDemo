@@ -7,22 +7,15 @@ services:
             dockerfile: ./docker/Dockerfile.db 
         volumes:
           - /database:/var/opt/mssql
-          - ./databaserestore:/tmp/backup          
+          - ./database:/tmp/backup          
         environment:
             - ACCEPT_EULA=Yy
-            - SA_PASSWORD=a6_LeTZfqPR@S^
+            - SA_PASSWORD=HereIsThePa$$word!
             - MSSQL_PID=Developer
         ports:
             - "1433:1433"       
         command: 
             [/opt/mssql/bin/sqlservr]    
-    redis:
-        container_name: redis
-        build:
-            context: "./"
-            dockerfile: ./docker/Dockerfile.redis   
-        ports:
-            - "6379:6379" 
     nginx:
         container_name: nginx
         build:
@@ -42,8 +35,6 @@ services:
         environment:
             - ASPNETCORE_ENVIRONMENT=Development
             - ASPNETCORE_CONTENTROOTPATH=/app
+            - USE_DOCKER_FOR_DEV=True
         links:
-            - database
-            - redis
-
-            
+            - database            

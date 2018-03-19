@@ -14,9 +14,6 @@ Vagrant.configure("2") do |config|
   # for sql
   config.vm.network "forwarded_port", guest: 1433, host: 9033
   
-  # for redis
-  config.vm.network "forwarded_port", guest: 6379, host: 9079
-  
   # for ssh
   config.vm.network "forwarded_port", id: "ssh", guest: 22, host: 9022
   
